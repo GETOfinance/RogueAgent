@@ -8,7 +8,31 @@
 *An advanced AI-powered platform that operates 24/7—scanning global markets, analyzing on-chain data, delivering high-conviction trading signals, and executing trades autonomously on Hyperliquid.*
 
 </div>
+---
 
+### 💰 $RGE Token
+
+The **$RGE** token powers Rogue's tiered access system and is deployed on the 0G chain.
+
+| Property | Value |
+|----------|-------|
+| **Token Name** | Rogue Agent |
+| **Symbol** | RGE |
+| **0G Testnet Address** | `0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8` |
+| **0G Mainnet Address** | `0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8` | 
+| **Total Supply** | 1,000,000,000 RGE |
+| **Chain Explorer** | [chainscan.0g.ai](https://chainscan.0g.ai) |
+| **Testnet Explorer** | [chainscan-galileo.0g.ai](https://chainscan-galileo.0g.ai) |
+
+**Tier Requirements**:
+| Tier | RGE Required | Access Level |
+|------|-------------|--------------|
+| 💎 Diamond | 1,000+ | Full access, unlimited custom scans, priority alpha |
+| 🥇 Gold | 100–999 | Full signals, 10 custom scans/day |
+| 🥈 Silver | 10–99 | Delayed signals, 5 custom scans/day |
+| 🌐 Public | 0–9 | Curated highlights only |
+
+---
 ---
 
 ## 📋 Table of Contents
@@ -1860,7 +1884,7 @@ The **$RGE** token powers Rogue's tiered access system and is deployed on the 0G
 | **Token Name** | Rogue Agent |
 | **Symbol** | RGE |
 | **0G Testnet Address** | `0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8` |
-| **0G Mainnet Address** | Deployed on 0G Mainnet (Chain ID: 16661) |
+| **0G Mainnet Address** | `0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8` |
 | **Total Supply** | 1,000,000,000 RGE |
 | **Chain Explorer** | [chainscan.0g.ai](https://chainscan.0g.ai) |
 | **Testnet Explorer** | [chainscan-galileo.0g.ai](https://chainscan-galileo.0g.ai) |

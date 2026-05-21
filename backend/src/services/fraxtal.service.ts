@@ -1,32 +1,28 @@
 import { ethers } from 'ethers';
 import { config } from '../config/env.config';
 import { logger } from '../utils/logger.util';
-import { CONTRACTS, SUPPORTED_CHAINS } from '../constants/tiers';
+import { CONTRACTS } from '../constants/tiers';
 
 const ERC20_ABI = [
   'function balanceOf(address owner) view returns (uint256)',
   'function decimals() view returns (uint8)',
 ];
 
-type ChainId = keyof typeof SUPPORTED_CHAINS;
-
-export class FraxtalService {
+export class ChainService {
   private providers: Map<string, ethers.JsonRpcProvider> = new Map();
   private tokenContracts: Map<string, ethers.Contract> = new Map();
   private decimals: Map<string, number> = new Map();
 
   constructor() {
-    this.initializeChain('fraxtal', config.FRAXTAL_RPC_URL, CONTRACTS.RGE_TOKEN);
+    if (CONTRACTS.RGE_TOKEN_ZG_MAINNET) {
+      this.initializeChain('0g-mainnet', config.ZG_CHAIN_RPC_URL || 'https://evmrpc.0g.ai', CONTRACTS.RGE_TOKEN_ZG_MAINNET);
+    }
 
     if (CONTRACTS.RGE_TOKEN_ZG_TESTNET) {
       this.initializeChain('0g-testnet', 'https://evmrpc-testnet.0g.ai', CONTRACTS.RGE_TOKEN_ZG_TESTNET);
     }
 
-    if (CONTRACTS.RGE_TOKEN_ZG_MAINNET) {
-      this.initializeChain('0g-mainnet', 'https://evmrpc.0g.ai', CONTRACTS.RGE_TOKEN_ZG_MAINNET);
-    }
-
-    logger.info(`FraxtalService initialized for chains: ${Array.from(this.providers.keys()).join(', ')}`);
+    logger.info(`ChainService initialized for chains: ${Array.from(this.providers.keys()).join(', ')}`);
   }
 
   private initializeChain(chainId: string, rpcUrl: string, tokenAddress: string): void {
@@ -37,9 +33,9 @@ export class FraxtalService {
       const contract = new ethers.Contract(tokenAddress, ERC20_ABI, provider);
       this.providers.set(chainId, provider);
       this.tokenContracts.set(chainId, contract);
-      logger.info(`FraxtalService: ${chainId} chain initialized — RPC: ${rpcUrl}, Token: ${tokenAddress}`);
+      logger.info(`ChainService: ${chainId} chain initialized — RPC: ${rpcUrl}, Token: ${tokenAddress}`);
     } catch (error: any) {
-      logger.error(`FraxtalService: failed to initialize ${chainId}:`, error.message);
+      logger.error(`ChainService: failed to initialize ${chainId}:`, error.message);
     }
   }
 
@@ -57,7 +53,7 @@ export class FraxtalService {
     }
   }
 
-  async getRGEBalance(address: string, chainId: string = 'fraxtal'): Promise<number> {
+  async getRGEBalance(address: string, chainId: string = '0g-mainnet'): Promise<number> {
     try {
       if (!ethers.isAddress(address)) {
         throw new Error('Invalid address format');
@@ -116,4 +112,4 @@ export class FraxtalService {
   }
 }
 
-export const fraxtalService = new FraxtalService();
+export const fraxtalService = new ChainService();

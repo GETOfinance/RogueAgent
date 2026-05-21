@@ -1,13 +1,12 @@
 export const CONTRACTS = {
-  RGE_TOKEN: '0xe5Ee677388a6393d135bEd00213E150b1F64b032',
-  FRAXTAL_PLATFORM_ID: 'fraxtal',
+  RGE_TOKEN_ZG_MAINNET: process.env.RGE_TOKEN_ZG_MAINNET || '0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8',
   RGE_TOKEN_ZG_TESTNET: process.env.RGE_TOKEN_ZG_TESTNET || '0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8',
-  RGE_TOKEN_ZG_MAINNET: process.env.RGE_TOKEN_ZG_MAINNET || '',
+  ZG_MAINNET_PLATFORM_ID: '0g-mainnet',
 };
 
 export const ZG_CHAINS = {
   testnet: {
-    name: '0G-Galileo-Testnet',
+    name: '0G Galileo Testnet',
     chainId: 16602,
     rpcUrl: 'https://evmrpc-testnet.0g.ai',
     blockExplorer: 'https://chainscan-galileo.0g.ai',

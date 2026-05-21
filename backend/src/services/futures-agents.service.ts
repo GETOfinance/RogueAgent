@@ -5,7 +5,7 @@ import crypto from 'crypto';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // FUTURES AGENTS SERVICE
-// Manages Diamond-tier user agents for automated Hyperliquid Testnet trading
+// Manages Diamond-tier user agents for automated Hyperliquid Mainnet trading
 // ═══════════════════════════════════════════════════════════════════════════════
 
 // Network mode type
@@ -152,7 +152,7 @@ class FuturesAgentsService {
     walletAddress: string,          // Connected wallet (for DB lookup)
     hyperliquidWalletAddress: string, // Hyperliquid wallet address
     privateKey: string,             // Hyperliquid private key
-    networkMode: NetworkMode = 'testnet' // Network mode (mainnet or testnet)
+    networkMode: NetworkMode = 'mainnet' // Network mode (mainnet or testnet)
   ): Promise<{ success: boolean; error?: string }> {
     try {
       // Encrypt the private key
@@ -209,13 +209,13 @@ class FuturesAgentsService {
     return {
       privateKey: this.decrypt(data.encrypted_api_key),
       hyperliquidWalletAddress: data.hyperliquid_wallet_address,
-      networkMode: data.network_mode || 'testnet', // Default to testnet for backwards compatibility
+      networkMode: data.network_mode || 'mainnet', // Default to mainnet
     };
   }
 
   async getNetworkMode(walletAddress: string): Promise<NetworkMode> {
     const keys = await this.getApiKeys(walletAddress);
-    return keys?.networkMode || 'testnet';
+    return keys?.networkMode || 'mainnet';
   }
 
   async deleteApiKeys(walletAddress: string): Promise<boolean> {

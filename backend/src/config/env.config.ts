@@ -41,7 +41,6 @@ const envSchema = z.object({
   PROXY: z.string().optional(),
   TELEGRAM_BOT_TOKEN: z.string().optional(),
   TELEGRAM_CHANNEL_ID: z.string().optional(),
-  FRAXTAL_RPC_URL: z.string().url().default('https://rpc.frax.com'),
   COINGECKO_API_KEY: z.string().optional(),
   MORALIS_API_KEY: z.string().optional(),
   TAVILY_API_KEY: z.string().optional(),

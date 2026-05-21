@@ -7,7 +7,7 @@ export class TierManager {
   async verifyTier(walletAddress: string): Promise<{ tier: Tier; balance: number }> {
     try {
       // Get RGE Balance
-      const balance = await fraxtalService.getRGEBalance(walletAddress);
+      const balance = await fraxtalService.getRGEBalance(walletAddress, '0g-mainnet');
 
       // Determine tier based on balance
       let tier: Tier = TIERS.NONE;

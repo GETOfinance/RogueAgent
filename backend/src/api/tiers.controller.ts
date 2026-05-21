@@ -20,20 +20,28 @@ router.post('/verify', async (req: Request, res: Response) => {
 
     const { tier, balance } = await tierManager.verifyTier(walletAddress);
 
-    // Save to Supabase
-    const user = await supabaseService.upsertUser({
-      wallet_address: walletAddress,
-      tier,
-      last_verified_at: new Date().toISOString(),
-    });
+    // Save to Supabase (non-critical — don't fail if DB is unavailable)
+    let telegram_connected = false;
+    let telegram_username: string | null = null;
+    try {
+      const user = await supabaseService.upsertUser({
+        wallet_address: walletAddress,
+        tier,
+        last_verified_at: new Date().toISOString(),
+      });
+      telegram_connected = !!user.telegram_user_id;
+      telegram_username = user.telegram_username;
+    } catch (dbError) {
+      logger.warn(`Supabase upsert failed for ${walletAddress} (tier verification still succeeded):`, (dbError as Error).message);
+    }
 
     res.json({
       success: true,
       data: {
         tier,
         balance,
-        telegram_connected: !!user.telegram_user_id,
-        telegram_username: user.telegram_username,
+        telegram_connected,
+        telegram_username,
       },
     });
   } catch (error) {

@@ -8,7 +8,7 @@ import { z } from 'zod';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // FUTURES AGENTS CONTROLLER
-// Diamond-only endpoints for Hyperliquid Perpetual Futures trading agents (Testnet)
+// Diamond-only endpoints for Hyperliquid Perpetual Futures trading agents (Mainnet)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const router = Router();
@@ -22,7 +22,7 @@ const apiKeysSchema = z.object({
   walletAddress: z.string().min(1), // Connected wallet (for DB lookup)
   hyperliquidWalletAddress: z.string().min(1), // Hyperliquid wallet address
   privateKey: z.string().min(1), // Hyperliquid private key
-  networkMode: z.enum(['mainnet', 'testnet']).optional().default('testnet'), // Network mode
+  networkMode: z.enum(['mainnet', 'testnet']).optional().default('mainnet'), // Network mode
 });
 
 const createAgentSchema = z.object({

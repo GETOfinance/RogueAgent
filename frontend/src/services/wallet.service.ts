@@ -1,7 +1,6 @@
 import { api } from './api.service';
 import { Tier, RGE_CONTRACTS } from '../constants/tiers';
 import { createPublicClient, http } from 'viem';
-import { fraxtal } from 'wagmi/chains';
 import { ZG_CHAINS } from '../config/wagmi';
 
 const ERC20_ABI = [
@@ -22,11 +21,10 @@ const ERC20_ABI = [
 ] as const;
 
 function getChainConfig(chainId: number) {
-  if (chainId === fraxtal.id) return { chain: fraxtal, contract: RGE_CONTRACTS.fraxtal.address };
-  if (chainId === ZG_CHAINS.testnet.id && RGE_CONTRACTS['0g-testnet'].address)
-    return { chain: ZG_CHAINS.testnet, contract: RGE_CONTRACTS['0g-testnet'].address };
   if (chainId === ZG_CHAINS.mainnet.id && RGE_CONTRACTS['0g-mainnet'].address)
     return { chain: ZG_CHAINS.mainnet, contract: RGE_CONTRACTS['0g-mainnet'].address };
+  if (chainId === ZG_CHAINS.testnet.id && RGE_CONTRACTS['0g-testnet'].address)
+    return { chain: ZG_CHAINS.testnet, contract: RGE_CONTRACTS['0g-testnet'].address };
   return null;
 }
 

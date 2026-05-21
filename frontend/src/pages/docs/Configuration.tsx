@@ -126,11 +126,7 @@ export default function Configuration() {
                         </div>
                         <div className="p-4">
                             <p className="text-gray-300 mb-2 text-sm">API key for alternative Scanner LLM endpoint.</p>
-                            <p className="text-gray-400 text-xs mb-3">Configure with <code className="text-teal-glow bg-white/5 px-2 py-0.5 rounded">SCANNER_BASE_URL</code> and <code className="text-teal-glow bg-white/5 px-2 py-0.5 rounded">SCANNER_MODEL</code></p>
-                            <div className="bg-[#0d1117] rounded p-2 font-mono text-xs">
-                                <span className="text-blue-400">SCANNER_BASE_URL</span>=<span className="text-green-400">https://v98store.com/v1</span><br/>
-                                <span className="text-blue-400">SCANNER_MODEL</span>=<span className="text-green-400">grok-4-fast</span>
-                            </div>
+                            <p className="text-gray-400 text-xs mb-3">Powered by <a href="https://docs.0g.ai/" target="_blank" rel="noopener noreferrer" className="text-teal-glow hover:underline">0G AI</a> decentralized inference network.</p>
                         </div>
                     </div>
 
@@ -140,8 +136,7 @@ export default function Configuration() {
                             <span className="ml-3 px-2 py-0.5 bg-red-500/20 text-red-300 text-xs rounded">Required</span>
                         </div>
                         <div className="p-4">
-                            <p className="text-gray-300 mb-2 text-sm">OpenAI API key for GPT-5 integration.</p>
-                            <p className="text-gray-400 text-xs mb-3">Get from: <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-teal-glow hover:underline">platform.openai.com/api-keys</a></p>
+                            <p className="text-gray-300 mb-2 text-sm">LLM inference powered by <a href="https://docs.0g.ai/" target="_blank" rel="noopener noreferrer" className="text-teal-glow hover:underline">0G AI</a> decentralized compute network.</p>
                         </div>
                     </div>
 
@@ -151,18 +146,14 @@ export default function Configuration() {
                             <span className="ml-3 px-2 py-0.5 bg-blue-500/20 text-blue-300 text-xs rounded">Optional</span>
                         </div>
                         <div className="p-4">
-                            <p className="text-gray-300 mb-2 text-sm">Customize OpenAI endpoint and model selection.</p>
-                            <p className="text-gray-400 text-xs mb-3">Default: <code className="text-teal-glow bg-white/5 px-2 py-0.5 rounded">gpt-5-nano-2025-08-07</code> via custom base URL</p>
-                            <div className="bg-[#0d1117] rounded p-2 font-mono text-xs">
-                                <span className="text-blue-400">OPENAI_BASE_URL</span>=<span className="text-green-400">https://gpt1.shupremium.com/v1</span><br/>
-                                <span className="text-blue-400">OPENAI_MODEL</span>=<span className="text-green-400">gpt-5-nano-2025-08-07</span>
-                            </div>
+                            <p className="text-gray-300 mb-2 text-sm">0G AI decentralized inference endpoint and model selection.</p>
+                            <p className="text-gray-400 text-xs mb-3">Learn more: <a href="https://docs.0g.ai/" target="_blank" rel="noopener noreferrer" className="text-teal-glow hover:underline">docs.0g.ai</a></p>
                         </div>
                     </div>
 
                     <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
                         <p className="text-blue-200 text-sm">
-                            <strong>💡 Models:</strong> Analyzer uses <code className="text-teal-glow bg-white/5 px-2 py-0.5 rounded">gpt-5-nano</code>, Scanner uses <code className="text-teal-glow bg-white/5 px-2 py-0.5 rounded">grok-4-fast</code> for advanced TA analysis.
+                            <strong>💡 Models:</strong> Powered by <a href="https://docs.0g.ai/" target="_blank" rel="noopener noreferrer" className="text-teal-glow hover:underline">0G AI</a> decentralized inference — Qwen3-32B for analysis and scanning.
                         </p>
                     </div>
                 </div>

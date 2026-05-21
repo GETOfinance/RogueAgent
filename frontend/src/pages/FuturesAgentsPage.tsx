@@ -37,7 +37,7 @@ export function FuturesAgentsPage() {
   const { tier, isLoading: isTierLoading } = useUserTier();
   // Start as null to indicate "not yet loaded" - prevents flash of API key setup form
   const [hasApiKeys, setHasApiKeys] = useState<boolean | null>(null);
-  const [networkMode, setNetworkMode] = useState<NetworkMode>('testnet');
+  const [networkMode, setNetworkMode] = useState<NetworkMode>('mainnet');
   const [agents, setAgents] = useState<FuturesAgent[]>([]);
   const [positions, setPositions] = useState<FuturesPosition[]>([]);
   const [trades, setTrades] = useState<FuturesTrade[]>([]);

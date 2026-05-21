@@ -52,7 +52,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
                <Link to="/docs" className={`px-3 py-1.5 rounded-md transition-colors ${location.pathname.startsWith('/docs') ? 'text-white bg-white/5' : 'hover:text-white hover:bg-white/5'}`}>
                  Documentation
                </Link>
-               <a href="https://github.com/zaikaman/RogueAgent" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-md hover:text-white hover:bg-white/5 transition-colors">
+               <a href="https://github.com/GETOfinance/RogueAgent" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-md hover:text-white hover:bg-white/5 transition-colors">
                  GitHub
                </a>
                <Link to="/app" className="px-3 py-1.5 rounded-md hover:text-white hover:bg-white/5 transition-colors">
@@ -103,11 +103,11 @@ export function DocsLayout({ children }: DocsLayoutProps) {
           
           {/* Footer for docs */}
           <div className="max-w-5xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-            <p>&copy; 2025 Rogue Agent. All rights reserved.</p>
+            <p>&copy; 2026 Rogue Agent. All rights reserved.</p>
             <div className="flex gap-6">
-                <a href="https://github.com/zaikaman/RogueAgent" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a>
-                <a href="https://t.me/rogueadkbot" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Telegram</a>
-                <a href="https://x.com/Rogue_IQAI" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Twitter</a>
+                <span>GitHub</span>
+                <span>Telegram</span>
+                <span>Twitter</span>
             </div>
           </div>
         </main>

@@ -306,7 +306,7 @@ export default function Architecture() {
                         <li>• <strong className="text-white">Express</strong> for API server</li>
                         <li>• <strong className="text-white">@iqai/adk</strong> for agent orchestration</li>
                         <li>• <strong className="text-white">Supabase</strong> (PostgreSQL) for data storage</li>
-                        <li>• <strong className="text-white">OpenAI GPT-5 (gpt-5-nano)</strong> and <strong className="text-white">Grok 4 (grok-4-fast)</strong> for LLMs</li>
+                        <li>• <strong className="text-white"><a href="https://docs.0g.ai/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-glow transition-colors">0G AI</a></strong> for decentralized LLM inference</li>
                     </ul>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-6">

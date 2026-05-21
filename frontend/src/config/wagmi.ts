@@ -1,5 +1,4 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
-import { fraxtal } from 'wagmi/chains';
 import { defineChain } from 'viem';
 
 const projectId = import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID || '3a8170812b534d0ff9d794f19a901d64';
@@ -53,14 +52,13 @@ export const ZG_CHAINS = {
 } as const;
 
 export const RGE_TOKEN_ADDRESSES = {
-  fraxtal: '0xe5Ee677388a6393d135bEd00213E150b1F64b032',
+  '0g-mainnet': import.meta.env.VITE_RGE_TOKEN_ZG_MAINNET || '0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8',
   '0g-testnet': import.meta.env.VITE_RGE_TOKEN_ZG_TESTNET || '',
-  '0g-mainnet': import.meta.env.VITE_RGE_TOKEN_ZG_MAINNET || '',
 } as const;
 
 export const config = getDefaultConfig({
   appName: 'RogueAgent',
   projectId,
-  chains: [fraxtal, zeroGGalileoTestnet, zeroGMainnet],
+  chains: [zeroGMainnet, zeroGGalileoTestnet],
   ssr: false,
 });

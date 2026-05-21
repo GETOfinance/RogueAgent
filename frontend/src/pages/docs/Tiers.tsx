@@ -206,8 +206,7 @@ export default function Tiers() {
                     </div>
                     <div>
                         <h3 className="text-white font-semibold mb-2">On-Chain Balance Check</h3>
-                        <p className="text-gray-400">Rogue queries the Fraxtal blockchain for your $RGE token balance at contract address:</p>
-                        <code className="text-teal-glow bg-white/5 px-2 py-1 rounded text-xs">0xe5Ee677388a6393d135bEd00213E150b1F64b032</code>
+                        <p className="text-gray-400">Rogue queries the <a href="https://docs.0g.ai/" target="_blank" rel="noopener noreferrer" className="text-teal-glow hover:underline">0G</a> blockchain for your $RGE token balance.</p>
                     </div>
                 </div>
 
@@ -297,15 +296,6 @@ export default function Tiers() {
                 <div className="bg-white/5 border border-white/10 rounded-lg p-6">
                     <h3 className="text-white font-semibold mb-2">Do I need to re-verify after buying more tokens?</h3>
                     <p className="text-gray-400">Yes, run <code className="text-teal-glow bg-white/5 px-2 py-0.5 rounded">/verify</code> again to update your tier. Tiers are checked on-demand, not automatically.</p>
-                </div>
-
-                <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <h3 className="text-white font-semibold mb-2">Where do I buy $RGE tokens?</h3>
-                    <p className="text-gray-400 mb-3">You can purchase $RGE through the IQ.AI pending page:</p>
-                    <a href="https://app.iqai.com/pending/0xe5Ee677388a6393d135bEd00213E150b1F64b032" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-teal-glow/10 hover:bg-teal-glow/20 border border-teal-glow/30 text-teal-glow rounded-lg transition-colors">
-                        Buy $RGE on IQ.AI →
-                    </a>
-                    <p className="text-gray-500 text-sm mt-3">Contract address: <code className="text-teal-glow bg-white/5 px-2 py-0.5 rounded">0xe5Ee677388a6393d135bEd00213E150b1F64b032</code></p>
                 </div>
 
                 <div className="bg-white/5 border border-white/10 rounded-lg p-6">

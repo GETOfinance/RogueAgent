@@ -21,19 +21,14 @@ export const TIER_BENEFITS = {
 };
 
 export const RGE_CONTRACTS = {
-  fraxtal: {
-    address: '0xe5Ee677388a6393d135bEd00213E150b1F64b032',
-    chainId: 252,
-    name: 'Fraxtal',
+  '0g-mainnet': {
+    address: import.meta.env.VITE_RGE_TOKEN_ZG_MAINNET || '0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8',
+    chainId: 16661,
+    name: '0G Mainnet',
   },
   '0g-testnet': {
     address: import.meta.env.VITE_RGE_TOKEN_ZG_TESTNET || '0x4Cd7fDFf83DC1540696BdaF38840a93134336dF8',
     chainId: 16602,
     name: '0G-Galileo-Testnet',
-  },
-  '0g-mainnet': {
-    address: import.meta.env.VITE_RGE_TOKEN_ZG_MAINNET || '',
-    chainId: 16661,
-    name: '0G Mainnet',
   },
 } as const;

@@ -302,7 +302,7 @@ export default function Home() {
                         <div className="flex gap-16 py-2 items-center animate-marquee whitespace-nowrap">
                             {[...Array(2)].map((_, i) => (
                                 <div key={i} className="flex gap-16 shrink-0 items-center min-w-full justify-around">
-                                    <span className="text-xl font-bold text-gray-600 hover:text-white transition duration-300">FRAXTAL</span>
+                                    <span className="text-xl font-bold text-gray-600 hover:text-white transition duration-300">0G</span>
                                     <span className="text-xl font-bold text-gray-600 hover:text-white transition duration-300">SOLANA</span>
                                     <span className="text-xl font-bold text-gray-600 hover:text-white transition duration-300">BASE</span>
                                     <span className="text-xl font-bold text-gray-600 hover:text-white transition duration-300">ETHEREUM</span>
@@ -767,9 +767,9 @@ export default function Home() {
                         <div>
                             <h4 className="text-white font-bold mb-6">Community</h4>
                             <ul className="space-y-4 text-sm text-gray-500">
-                                <li><a href="https://x.com/GETOfinance" target="_blank" rel="noopener noreferrer" className="hover:text-teal-glow transition-colors">X (Twitter)</a></li>
-                                <li><a href="https://t.me/roguebot" target="_blank" rel="noopener noreferrer" className="hover:text-teal-glow transition-colors">Telegram</a></li>
-                                <li><a href="https://github.com/GETOfinance/RogueAgent" target="_blank" rel="noopener noreferrer" className="hover:text-teal-glow transition-colors">GitHub</a></li>
+                                <li>X (Twitter)</li>
+                                <li>Telegram</li>
+                                <li>GitHub</li>
                             </ul>
                         </div>
                     </div>

@@ -109,7 +109,7 @@ export function DashboardHome() {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">Network</span>
-                  <span className="text-cyan-400 font-mono">FRAXTAL</span>
+                  <span className="text-cyan-400 font-mono">0G Mainnet</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">Uptime</span>

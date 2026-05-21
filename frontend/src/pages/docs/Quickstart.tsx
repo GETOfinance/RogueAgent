@@ -44,7 +44,7 @@ export default function Quickstart() {
                     <span className="ml-2">bash</span>
                 </div>
                 <div className="text-gray-300">
-                    <span className="text-purple-400">git</span> clone https://github.com/zaikaman/RogueAgent.git<br/>
+                    <span className="text-purple-400">git</span> clone https://github.com/GETOfinance/RogueAgent.git<br/>
                     <span className="text-purple-400">cd</span> RogueAgent
                 </div>
             </div>

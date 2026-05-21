@@ -24,7 +24,7 @@ export const futuresService = {
     connectedWallet: string, 
     hyperliquidWallet: string, 
     privateKey: string,
-    networkMode: NetworkMode = 'testnet'
+    networkMode: NetworkMode = 'mainnet'
   ): Promise<{ success: boolean; error?: string }> {
     try {
       await api.post('/futures/api-keys', {
